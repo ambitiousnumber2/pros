@@ -1,14 +1,14 @@
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body, html {
+html, body {
   height: 100%;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
-  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+  background: #000;
 }
 
 /* Background Video */
@@ -16,86 +16,136 @@ body, html {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
-
-/* Background Music (hidden) */
-#bgMusic {
-  display: none;
-}
-
-/* Overlay to darken video */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: -1;
+  object-fit: cover;
+  z-index: -10;
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Overlay Container */
+.overlay {
+  padding: 3rem 2rem;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+/* Intro Section */
+.intro {
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 1rem;
 }
 
-.content {
-  animation: fadeIn 2s ease-in-out;
-  max-width: 800px;
-}
-
-.profile {
-  width: 140px;
-  height: 140px;
+.avatar {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  border: 3px solid #00ffe7;
-  box-shadow: 0 0 25px #00ffe7;
+  border: 4px solid #00fff2;
+  box-shadow: 0 0 30px #00fff2;
+  object-fit: cover;
   margin-bottom: 1rem;
 }
 
-h1 {
-  font-size: 2.8rem;
-  text-shadow: 0 0 10px #0ff;
+.name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
 }
 
 .typing {
-  border-right: 2px solid #fff;
-  white-space: nowrap;
+  font-size: 1.2rem;
+  color: #ccc;
   overflow: hidden;
-  display: inline-block;
+  white-space: nowrap;
+  border-right: 3px solid #00fff2;
+  width: 0;
+  animation: typing 4s steps(50, end) forwards;
+}
+
+@keyframes typing {
+  to {
+    width: 100%;
+  }
 }
 
 .quote {
-  font-style: italic;
-  color: #ccc;
-  margin-top: 0.5rem;
-}
-
-.sub {
-  color: #aaa;
-  margin-bottom: 1rem;
-}
-
-.info p {
   font-size: 1rem;
-  margin: 0.4rem 0;
+  color: #aaa;
+  margin-top: 0.6rem;
 }
 
-a {
-  color: #00ffe7;
+/* Section Layouts */
+section {
+  max-width: 850px;
+  margin: 2.5rem auto;
+  padding: 1.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00fff2;
+}
+
+section p, section li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+ul {
+  list-style: none;
+}
+
+.passion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+.passion-grid div {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00fff2;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Contact */
+.contact-icons {
+  margin-top: 1rem;
+}
+.contact-icons a {
+  display: inline-block;
+  margin: 0 1rem;
+  color: #00fff2;
   text-decoration: none;
+  font-weight: bold;
+}
+.contact-icons a:hover {
+  text-decoration: underline;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .name {
+    font-size: 2.2rem;
+  }
+  .typing {
+    font-size: 1rem;
+  }
+  section {
+    padding: 1.2rem;
+  }
 }
 
