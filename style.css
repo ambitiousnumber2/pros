@@ -33,17 +33,16 @@ body {
   z-index: -1;
 }
 
-/* Header Section */
+/* Hero Header */
 .hero {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding-top: 150px;
   animation: fadeIn 2s ease-in;
-  position: relative;
 }
 
 .name {
@@ -59,30 +58,30 @@ body {
 
 .tagline {
   font-size: 1.3rem;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #ccc;
   text-shadow: 0 0 5px rgba(0,255,247,0.3);
 }
 
 .scroll-down {
   margin-top: 100px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-decoration: none;
   color: #00fff7;
   border: 2px solid #00fff7;
   padding: 12px 30px;
   border-radius: 30px;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px #00fff7;
+  box-shadow: 0 0 12px #00fff7;
 }
 
 .scroll-down:hover {
   background: #00fff7;
   color: #000;
-  transform: translateY(5px);
+  transform: translateY(6px);
 }
 
-/* Sections */
+/* Section Styling */
 section {
   padding: 80px 20px;
   text-align: center;
@@ -104,7 +103,7 @@ section p {
   color: #eee;
 }
 
-/* Skills List */
+/* Skills Section */
 .skills-list {
   list-style: none;
   display: flex;
@@ -130,7 +129,7 @@ section p {
   box-shadow: 0 0 15px #00fff7;
 }
 
-/* Animations */
+/* Animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -149,6 +148,7 @@ section p {
   .scroll-down {
     font-size: 1rem;
     padding: 10px 20px;
+    margin-top: 80px;
   }
 
   .skills-list li {
