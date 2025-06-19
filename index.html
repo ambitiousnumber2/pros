@@ -3,52 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aayansh Thakur | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <title>Ayansh Thakur | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+  <link rel="icon" href="images/profile.jpg">
 </head>
 <body>
+  <!-- Background Music -->
+  <audio autoplay loop id="bgMusic" volume="0.5">
+    <source src="music/bgm.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-  <!-- Background Video -->
-  <video autoplay muted loop id="bg-video">
-    <source src="videos/bg.mp4" type="video/mp4">
-    Your browser does not support video.
-  </video>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="stars"></div>
+    <div class="overlay"></div>
 
-  <!-- Overlay -->
-  <div class="overlay"></div>
+    <div class="content">
+      <img src="images/profile.jpg" class="profile" alt="Ayansh Thakur">
+      <h1><span class="typing"></span></h1>
+      <p class="quote">〄 Crafting worlds in ink, conquering minds in chess, thriving in steel and sweat.</p>
+      <p class="sub">☾ Forged in darkness, thriving in chaos.</p>
 
-  <!-- Header Section -->
-  <header class="hero">
-    <h1 class="name">Hi, I'm <span class="highlight">Aayansh Thakur</span></h1>
-    <p class="tagline">A 17-year-old passionate programmer with big dreams.</p>
-    <a href="#about" class="scroll-down">↓ Explore</a>
-  </header>
-
-  <!-- About Me -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm 17 years old, 6'3 tall, and absolutely obsessed with programming and building awesome things on the web.</p>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>My Skills</h2>
-    <ul class="skills-list">
-      <li>💻 Python</li>
-      <li>🌐 HTML</li>
-      <li>🎨 CSS</li>
-      <li>🧠 JavaScript</li>
-      <li>🚀 Java</li>
-    </ul>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Get in Touch</h2>
-    <p>Want to collaborate or hire me?</p>
-    <p>Email: <a href="mailto:aayansh@example.com">aayansh@example.com</a></p>
-  </section>
-
+      <div class="info">
+        <p><strong>✧ Hobbies:</strong> Basketball ⦾ Chess ⦾ Poetry ⦾ Novel Writing ⦾ Gym Freak ⦾ Cooking</p>
+        <p><strong>✦ Height:</strong> 6'3"</p>
+        <p><strong>✦ Religion:</strong> Name Suggests</p>
+        <p><strong>✦ Email:</strong> <a href="mailto:aayanxhthakur@gmail.com">aayanxhthakur@gmail.com</a></p>
+        <p><strong>✦ Instagram:</strong> <a href="https://instagram.com/serenehashira" target="_blank">@serenehashira</a></p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
